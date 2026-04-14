@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+//created search slice to search for the input value we typed in the input field.
 const searchSlice = createSlice({
   name: "search",
   initialState: "",
