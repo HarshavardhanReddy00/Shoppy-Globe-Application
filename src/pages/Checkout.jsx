@@ -26,7 +26,48 @@ const Checkout = () => {
   };
 
   return (
-    <></>
+    <div className="bg-gray-500">
+        <div className="p-5 max-w-md mx-auto bg-amber-400">
+            <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            value={form.name}
+            onChange={handleChange}
+            className="border p-2 w-full mb-3"/>
+            
+            <input
+            type="text"
+            name="e-mail"
+            placeholder="E-Mail"
+            value={form.name}
+            onChange={handleChange}
+            className="border p-2 w-full mb-3"/>
+            
+            <input
+            type="text"
+            name="address"
+            placeholder="Address"
+            value={form.address}
+            onChange={handleChange}
+            className="border p-2 w-full mb-3"
+            />
+            
+            <input
+            type="text"
+            name="phone"
+            placeholder="Phone"
+            value={form.phone}
+            onChange={handleChange}
+            className="border p-2 w-full mb-3"/>
+            
+            <button
+            onClick={handleOrder}
+            className="bg-blue-500 text-white px-4 py-2 rounded">Place Order
+            </button>
+            </div>
+    </div>
+    
   );
 };
 
