@@ -15,3 +15,17 @@ const withSuspense = (Component) => (
     <Component />
   </Suspense>
 );
+
+export const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    errorElement: withSuspense(NotFound),
+    children: [
+      { path: "/", element: withSuspense(ProductList) },
+      { path: "/product/:id", element: withSuspense(ProductDetail) },
+      { path: "/cart", element: withSuspense(Cart) },
+      { path: "/checkout", element: withSuspense(Checkout) },
+    ],
+  },
+]);
